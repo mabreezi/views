@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Area | Refugees</title>
+    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Minified Js -->
+    
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+  </head>
+  <body style="font-family:'Raleway', sans-serif">
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">KODHI</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <!--<li><a href="#">Welcome, Timo</a></li>
+            <li><a href="#">Logout</a></li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h3><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Participants</h3>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown create">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Add Participant
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a type="button" data-toggle="modal" data-target="#addPage">Add #</a></li>
+                 <li><a type="button" data-toggle="modal" data-target="#">Import File</a></li>
+               
+                <!--<li><a href="#">Add Student</a></li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+             <div class="list-group">
+              <a href="" class="list-group-item">
+                </span> Dashboard
+              </a>
+             <a href="asset.html" class="list-group-item">Assets </a>
+              <a href="staff.html" class="list-group-item active main-color-bg">Participants</a>
+              <a href="transaction.html" class="list-group-item "> Transactions</a>
+              <a href="" class="list-group-item"> Payments</a>
+        <a href="trade.html" class="list-group-item"> Trade</a>
+            </div>
+
+            <div class="well">
+           
+            </div>
+          </div>
+          <div class="col-md-9">
+            <!-- Website Overview -->
+            <div class="panel panel-default">
+              <div class="panel-heading main-color-bg">
+                <h3 class="panel-title">Participants</h3>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                      <div class="col-md-12">
+                          <input class="form-control" type="text" placeholder="Filter...">
+                      </div>
+                </div>
+                <br>
+                <table class="table table-striped table-hover">
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+						<th>Contact</th>
+                        <th></th>
+                      </tr>
+                      <tr>
+                        <td>A001</td>
+                        <td>Ivan Emoje</td>
+                        <td></td>
+						<td>+256772300410</td>
+                        <td><a class="btn btn-default" href="">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>A002</td>
+                        <td>David Odongo</td>
+                        <td></td>
+						<td>+256772300420</td>
+                        <td><a class="btn btn-default" href="">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>A003</td>
+                        <td>Brian Paul Musisi</td>
+                        <td></td>
+						<td>+256772300430</td>
+                        <td><a class="btn btn-default" href="">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                      </tr>
+                      <tr>
+                        <td>A004</td>
+                        <td>Timothy Musimbi</td>
+                        <td></td>
+						<td>+256772300440</td>
+                        <td><a class="btn btn-default" href="">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                      </tr>
+                    </table>
+              </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Modals -->
+
+    <!-- Add Page -->
+    <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Registration Form</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Identification Number</label>
+          <input type="text" class="form-control" placeholder="ID No">
+        </div>
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control" placeholder="First Name">
+        </div>
+		 <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-control" placeholder="Last Name">
+        </div>
+		<div class="form-group">
+          <label>Role</label>
+				<select>
+						<option value="agriculture">Distributor</option>
+						<option value="accounting">Receipient/Refugee</option>
+            <option value="agriculture">Vendor</option>
+            <option value="accounting">Implementing Partners</option>
+						
+				</select>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+  <script>
+     CKEDITOR.replace( 'editor1' );
+ </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
